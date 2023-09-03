@@ -1,0 +1,111 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/images/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: rgb(0, 0, 0, 0.5); /* Añade una capa de color negro semi-transparente */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Espacio alrededor del logo */
+    z-index: 1; /* Coloca el logo encima del contenido */
+    
+}
+
+.logo-container img {
+    width: 100px; /* Tamaño fijo del logo */
+    height: 100px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.904); /* Cambia el valor de opacidad a 0.3 */
+    color: #fff;
+    box-shadow: 0px 0px 10px rgb(184, 204, 8);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info,
+.map {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info h2,
+.map h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #949230;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+/* Estilo para la información de contacto */
+.contact-info ul li {
+    margin-bottom: 30px;
+    font-size: 18px; /* Tamaño de fuente aumentado */
+}
+
+/* Estilo para las etiquetas (Teléfono, Correo Electrónico, Dirección) */
+.contact-info ul li strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0px;
+    font-size: 25px; /* Tamaño de fuente aumentado */
+    color: #857d55;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(255, 238, 0);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Enlaces */
+a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+

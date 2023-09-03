@@ -1,0 +1,165 @@
+/* Estilo para el fondo de la página */
+body {
+    background-image: url('./assets/images/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: rgb(0, 0, 0, 0.5); /* Añade una capa de color negro semi-transparente */
+    color: rgb(151, 129, 6);
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Espacio alrededor del logo */
+    z-index: 1; /* Coloca el logo encima del contenido */
+    
+}
+
+.logo-container img {
+    width: 80px; /* Tamaño fijo del logo */
+    height: 80px;
+}
+
+
+/* Estilo para el contenedor que rodea al botón */
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(133, 133, 55);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Agrega espacio entre el botón y el contenedor */
+}
+
+
+/* Estilo para el contenedor del formulario con error */
+.container.error {
+    background-color: rgba(252, 52, 52, 0.568); /* Cambia el fondo a rojo */
+    transition: background-color 1s ease; /* Agrega una transición para volver a la normalidad */
+}
+
+/* Estilo para el contenedor del formulario exitoso */
+.container.success {
+    background-color: rgba(45, 255, 45, 0.527); /* Cambia el fondo a verde */
+    transition: background-color 1s ease; /* Agrega una transición para volver a la normalidad */
+}
+
+/* Clase para ocultar el formulario inicialmente */
+/*.hidden {
+/*    display: none;
+/*}
+
+
+/* Estilos para el encabezado "FORMULARIO DE RESERVACIONES" */
+h1 {
+    font-size: 24px;
+    margin-top: 0;
+    animation: changeColor 5s infinite; /* Aplicar la animación "changeColor" durante 5 segundos y repetir infinitamente */
+}
+
+
+/* Definir la animación "changeColor" */
+@keyframes changeColor {
+    0% {
+        color: rgb(151, 129, 6); /* Color inicial */
+    }
+    50% {
+        color: rgb(255, 196, 0); /* Color intermedio */
+    }
+    100% {
+        color: rgb(151, 129, 6); /* Color final (igual al inicial) */
+    }
+}
+
+
+
+/* Estilos para los campos de entrada y etiquetas (centrados) */
+label {
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+/* Estilos para el botón de Reservar */
+input[type="submit"] {
+    background-color: rgba(99, 96, 96, 0.89); /* Cambia el color del botón a dorado */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px; /* Añade un margen superior de 20px al botón */
+    display: inline-block; /* Hace que el botón se muestre en línea con otros elementos */
+    margin-left: 20px; /* Añade espacio entre los botones */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega una transición suave */
+    /* Cambia la fuente del botón */
+    font-family: 'Times New Roman', Times, serif; /* Cambia 'Arial' por la fuente que desees */
+}
+
+/* Agregar efecto de hover al botón */
+input[type="submit"]:hover {
+    background-color: rgba(145, 111, 0, 0.747); /* Cambia el color del botón al pasar el mouse */
+    transform: scale(1.05); /* Hace que el botón se agrande ligeramente al pasar el mouse */
+}
+
+/* Estilo para el nuevo botón personalizado */
+.custom-button {
+    background-color: rgba(99, 96, 96, 0.89); /* Cambia el color de fondo del botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin-top: 20px; /* Añade un margen superior igual al del botón "Reservar" */
+    display: inline-block; /* Hace que el botón se muestre en línea con otros elementos */
+    margin-left: 20px; /* Añade espacio entre los botones */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega una transición suave */
+    /* Cambia la fuente del botón */
+    font-family: 'Times New Roman', Times, serif; /* Cambia 'Arial' por la fuente que desees */
+}
+
+/* Estilo de hover para el nuevo botón */
+.custom-button:hover {
+    background-color: rgba(145, 111, 0, 0.747); /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Hace que el botón se agrande ligeramente al pasar el mouse */
+}
+
+
+
+
+
+
+

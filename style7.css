@@ -1,0 +1,138 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/images/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: rgb(0, 0, 0, 0.5); /* Añade una capa de color negro semi-transparente */
+}
+
+/* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Espacio alrededor del logo */
+    z-index: 1; /* Coloca el logo encima del contenido */
+    
+}
+
+.logo-container img {
+    width: 100px; /* Tamaño fijo del logo */
+    height: 100px;
+}
+
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto del encabezado */
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    color: #a39258;
+    background-color: rgba(2, 2, 2, 0.900);
+    box-shadow: 0px 0px 10px rgb(169, 179, 40);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px; /* Espacio entre elementos */
+}
+
+.columna-izquierda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas con igual ancho dentro de la columna izquierda */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+
+
+.entrada {
+    background-color: #9e9472; /* Color de fondo de cada entrada */
+    border: 2px solid #fffdfd; /* Borde suave */
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    color: #9c894c;
+}
+
+
+/* Establecer una altura fija para las imágenes */
+.entrada img {
+    max-width: 100%;
+    height: 200px; /* Ajusta la altura deseada */
+    border-radius: 5px;
+}
+
+.entrada h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333; /* Color de texto oscuro */
+}
+
+.entrada p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #131211; /* Color de texto más claro */
+}
+
+.entrada h5 {
+    max-height: 150px; /* Altura máxima inicial */
+    overflow: hidden;
+    color: #333;
+    transition: max-height 0.3s ease; /* Animación de expansión */
+}
+
+.entrada.expandir h5 {
+    max-height: none; /* Elimina la altura máxima al expandir */
+    overflow: visible;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Enlaces */
+a {
+    color: #333; /* Color de enlaces oscuro */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+

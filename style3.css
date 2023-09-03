@@ -1,0 +1,68 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('./assets/images/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: rgb(0, 0, 0, 0.5); /* Añade una capa de color negro semi-transparente */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Espacio alrededor del logo */
+    z-index: 1; /* Coloca el logo encima del contenido */
+    
+}
+
+.logo-container img {
+    width: 100px; /* Tamaño fijo del logo */
+    height: 100px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para las tarjetas de chef */
+.chef-card {
+    background-color: rgb(163, 151, 151);
+    box-shadow: 0 0 10px rgba(145, 175, 10, 0.664);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.chef-card img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+

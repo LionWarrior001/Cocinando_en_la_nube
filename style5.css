@@ -1,0 +1,126 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('./assets/images/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: rgb(0, 0, 0, 0.5); /* Añade una capa de color negro semi-transparente */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Espacio alrededor del logo */
+    z-index: 1; /* Coloca el logo encima del contenido */
+    
+}
+
+.logo-container img {
+    width: 80px; /* Tamaño fijo del logo */
+    height: 80px;
+}
+
+/* Estilos para el enlace de reservar */
+.reservar-link {
+    text-decoration: none;
+    display: inline-block; /* Asegura que el enlace se comporte como un bloque en línea */
+}
+
+/* Estilos para el enlace de reservar cuando está deshabilitado */
+.reservar-link.disabled {
+    pointer-events: none; /* Deshabilita eventos de clic en el enlace */
+    opacity: 0.6; /* Reduce la opacidad para indicar que está deshabilitado */
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(2, 2, 2, 0.900);
+    box-shadow: 0px 0px 10px rgb(141, 148, 38);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Estilo para cada mesa */
+.mesa {
+    flex: 1;
+    background-color: #8a855bde;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.mesa img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.mesa h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.mesa p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.reservar-btn {
+    background-color: #7f8a42;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservar-btn:hover {
+    background-color: #ff9900;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Enlaces */
+a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff9900;
+}

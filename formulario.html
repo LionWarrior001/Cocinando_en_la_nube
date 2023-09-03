@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Reservaciones</title>
+    <link rel="stylesheet" type="text/css" href="style2.css"> <!-- Agrega un archivo CSS externo -->
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="form">
+        <h1>FORMULARIO DE RESERVACIONES</h1>
+        <div class="logo-container">
+            <img src="./assets/images/logo.svg" alt="Logo" width="80" height="80">
+        </div>
+    </header>
+
+    <div id="form-container" class="container hidden <?php echo $formClass; ?>">
+        <form action="procesar_reserva.php" method="POST" onsubmit="return validateForm()">
+            <!-- Formulario aquí -->
+            <div class="container">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]{1,100}"><br><br>
+
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}"><br><br>
+
+                <label for="n_personas">Cantidad de Personas:</label>
+                <input type="number" id="n_personas" name="n_personas" required min="1" max="20"><br><br>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required min="2023-09-03" max="2023-12-20"><br><br>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required min="08:00" max="22:00"><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" maxlength="100"></textarea><br><br>
+            </div>
+            <div class="button-container">
+                <a href="index.html" class="custom-button">Regresar</a>
+                <input type="submit" name="reservar" value="Reservar" class="reserve-button">
+            </div>
+        </form>
+    </div>
+
+    <!-- Aquí se coloca el script JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Mostrar el formulario después de un retraso de 2 segundos si es exitoso
+            setTimeout(function () {
+                $('#form-container').removeClass('hidden');
+            }, 2000);
+
+            // Eliminar la clase "success" después de 3 segundos para volver a la normalidad
+            setTimeout(function () {
+                $('#form-container').removeClass('success');
+            }, 1000);
+        });
+
+        // Función para validar el formulario antes del envío
+        function validateForm() {
+            // Agrega aquí la lógica de validación adicional si es necesario
+            
+            return true; // Devuelve true si el formulario es válido y puede enviarse al servidor
+        }
+    </script>
+</body>
+</html>
+
