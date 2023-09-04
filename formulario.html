@@ -2,8 +2,24 @@
 <html>
 <head>
     <title>Formulario de Reservaciones</title>
-    <link rel="stylesheet" type="text/css" href="style2.css"> <!-- Agrega un archivo CSS externo -->
+    <link rel="stylesheet" type="text/css" href="style2.css">
     <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg+xml">
+    <style>
+        .message-box {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+        }
+        .success-message {
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+            color: #3c763d;
+        }
+    </style>
 </head>
 <body>
     <header class="form">
@@ -13,9 +29,8 @@
         </div>
     </header>
 
-    <div id="form-container" class="container hidden <?php echo $formClass; ?>">
-        <form action="procesar_reserva.php" method="POST" onsubmit="return validateForm()">
-            <!-- Formulario aquí -->
+    <div id="form-container" class="container">
+        <form action="procesar_reserva.php" method="POST" onsubmit="return submitForm();">
             <div class="container">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]{1,100}"><br><br>
@@ -42,28 +57,11 @@
         </form>
     </div>
 
-    <!-- Aquí se coloca el script JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Mostrar el formulario después de un retraso de 2 segundos si es exitoso
-            setTimeout(function () {
-                $('#form-container').removeClass('hidden');
-            }, 2000);
+    <div id="message-box" class="message-box"></div>
 
-            // Eliminar la clase "success" después de 3 segundos para volver a la normalidad
-            setTimeout(function () {
-                $('#form-container').removeClass('success');
-            }, 1000);
-        });
-
-        // Función para validar el formulario antes del envío
-        function validateForm() {
-            // Agrega aquí la lógica de validación adicional si es necesario
-            
-            return true; // Devuelve true si el formulario es válido y puede enviarse al servidor
-        }
-    </script>
+    <!-- Script JavaScript para mostrar y ocultar el mensaje -->
+   
 </body>
 </html>
+
 

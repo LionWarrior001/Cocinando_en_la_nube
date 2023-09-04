@@ -1,0 +1,137 @@
+/* Estilo para el fondo de la página */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('./assets/images/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-color: rgba(0, 0, 0, 0.5); /* Añade una capa de color negro semi-transparente */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Centra el contenido en la parte superior */
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Cambia a posición relativa */
+}
+
+/* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Espacio alrededor del logo */
+    z-index: 1; /* Coloca el logo encima del contenido */
+    
+}
+
+.logo-container img {
+    width: 80px; /* Tamaño fijo del logo */
+    height: 80px;
+}
+
+
+
+/* Nuevo elemento para el fondo gris */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo gris semi-transparente */
+    position: absolute; /* Posición absoluta para cubrir toda la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca el fondo gris detrás de todo */
+}
+
+
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(151, 129, 6);
+    padding: 50px;
+    text-align: center;
+    width: 300px;
+    margin-top: 20px; /* Agrega margen superior para separar el título del formulario */
+    color: rgb(133, 133, 55);
+}
+
+h1 {
+    color: rgb(151, 129, 6);
+    font-size: 24px;
+    margin: 20px;
+}
+
+/* Estilos para los campos y etiquetas */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: rgb(133, 133, 55);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fffafa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para el botón */
+button[type="submit"] {
+    background-color: #333;
+    color: rgb(170, 170, 76);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Añade un margen superior de 20px al botón */
+    display: inline-block; /* Hace que el botón se muestre en línea con otros elementos */
+    margin-left: 20px; /* Añade espacio entre los botones */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega una transición suave */
+    /* Cambia la fuente del botón */
+    font-family: 'Times New Roman', Times, serif; /* Cambia 'Arial' por la fuente que desees */
+    font-weight: bold;
+}
+
+/* Agregar efecto de hover al botón */
+button[type="submit"]:hover {
+    background-color: rgba(145, 111, 0, 0.250); /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Hace que el botón se agrande ligeramente al pasar el mouse */
+}
+
+/* Estilo para el nuevo botón personalizado */
+.custom-button {
+    background-color: #333; /* Cambia el color de fondo del botón */
+    color: rgb(170, 170, 76);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin-top: 20px; /* Añade un margen superior igual al del botón "Reservar" */
+    display: inline-block; /* Hace que el botón se muestre en línea con otros elementos */
+    margin-left: 20px; /* Añade espacio entre los botones */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Agrega una transición suave */
+    /* Cambia la fuente del botón */
+    font-family: 'Times New Roman', Times, serif; /* Cambia 'Arial' por la fuente que desees */
+    font-weight: bold;
+}
+
+/* Estilo de hover para el nuevo botón */
+.custom-button:hover {
+    background-color: rgba(145, 111, 0, 0.250); /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Hace que el botón se agrande ligeramente al pasar el mouse */
+}
+

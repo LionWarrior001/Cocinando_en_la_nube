@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos</title>
+    <link rel="stylesheet" href="style8.css">
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="overlay"></div>
+    <h1>FORMULARIO PARA DESCUENTOS</h1>
+    <div class="logo-container">
+        <img src="./assets/images/logo.svg" alt="Logo" width="80" height="80">
+    </div>
+    <div class="container">
+        <form action="procesar_reserva.php" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="nombre">Nombres:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required readonly>
+            </div>
+
+            <div class="button-container">
+                <a href="index.html" class="custom-button">Regresar</a>
+                <!-- Añade un name al botón para identificarlo -->
+                <button type="submit" name="suscribir">Suscribirse</button>
+            </div>
+        </form>
+    </div>
+    
+    <div id="message-box" class="message-box">
+        <!-- Aquí se mostrará el mensaje -->
+    </div>
+
+    <script>
+        // Recuperar el correo electrónico del almacenamiento local y mostrarlo en el campo de correo
+        const storedEmail = localStorage.getItem("email");
+        if (storedEmail) {
+            document.getElementById("correo").value = storedEmail;
+        }
+
+        // Manejar el envío del formulario
+        const form = document.getElementById("registro-form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Obtener los valores de los campos
+            const nombre = document.getElementById("nombre").value;
+            const apellidos = document.getElementById("apellidos").value;
+            const telefono = document.getElementById("telefono").value;
+            const correo = document.getElementById("correo").value;
+
+            // Validar la estructura del campo "Nombre"
+            if (!validarNombre(nombre)) {
+                alert("El campo de Nombres debe tener dos nombres separados por un espacio y no puede exceder 100 caracteres.");
+                return;
+            }
+
+            // Validar la estructura del campo "Apellidos"
+            if (!validarApellidos(apellidos)) {
+                alert("El campo de Apellidos debe tener dos apellidos separados por un espacio y no puede exceder 100 caracteres.");
+                return;
+            }
+
+            // Validar el número de teléfono
+            if (!validarTelefono(telefono)) {
+                alert("El número de teléfono debe contener exactamente 10 dígitos numéricos.");
+                return;
+            }
+
+            // Guardar los valores en el almacenamiento local
+            localStorage.setItem("email", correo);
+            localStorage.setItem("nombres", nombre);
+            localStorage.setItem("apellidos", apellidos);
+            localStorage.setItem("telefono", telefono);
+
+            // Aquí puedes agregar el código para enviar los datos a la base de datos en lugar de mostrarlos en la tabla
+            // Por ejemplo, puedes usar JavaScript para enviar una solicitud AJAX al servidor con los datos del formulario.
+        });
+
+        // Función para validar la estructura del campo "Nombre"
+        function validarNombre(nombre) {
+            const partes = nombre.trim().split(" ");
+            return partes.length === 2 && partes.every(part => part.length <= 50);
+        }
+
+        // Función para validar la estructura del campo "Apellidos"
+        function validarApellidos(apellidos) {
+            const partes = apellidos.trim().split(" ");
+            return partes.length === 2 && partes.every(part => part.length <= 50);
+        }
+
+        // Función para validar el número de teléfono
+        function validarTelefono(telefono) {
+            return /^\d{10}$/.test(telefono);
+        }
+
+    </script>
+</body>
+</html>

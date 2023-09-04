@@ -995,19 +995,16 @@
             Suscríbete y obtén <span class="span">25% de descuento.</span>
           </p>
 
-          <form action="" class="input-wrapper">
+          <form action="" class="input-wrapper" id="subscribe-form">
             <div class="icon-wrapper">
-              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-              <input type="email" name="email_address" placeholder="Correo" autocomplete="off" class="input-field">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                <input type="email" name="email_address" id="email-address" placeholder="Correo" autocomplete="off" class="input-field">
             </div>
-
             <button type="submit" class="btn btn-secondary">
-              <span class="text text-1">Subscribete</span>
-
-              <span class="text text-2" aria-hidden="true">Subscribete</span>
+                <span class="text text-1">Subscribete</span>
+                <span class="text text-2" aria-hidden="true">Subscribete</span>
             </button>
-          </form>
+        </form>
 
         </div>
 
@@ -1086,7 +1083,28 @@
   </a>
 
 
-
+  <script>
+    document.getElementById("subscribe-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+      const email = document.getElementById("email-address").value;
+      if (email.trim() !== "") {
+        localStorage.setItem("email", email); // Almacena el correo en el almacenamiento local
+        window.location.href = "descuentos.html"; // Redirecciona a la página "descuentos.html"
+      } else {
+        alert("Por favor, ingresa una dirección de correo válida.");
+      }
+    });
+    
+    // Modifica el evento click para que solo cierre la alerta si se hace clic en el botón "Aceptar"
+    window.addEventListener("click", function(event) {
+      const alertBox = document.querySelector(".alert");
+      const acceptButton = document.getElementById("accept-button");
+      if (event.target === acceptButton || event.target === alertBox) {
+        alertBox.style.display = "none";
+      }
+    });
+  </script>
+  
 
 
   <!-- 
@@ -1099,6 +1117,15 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    document.getElementById("subscribe-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita el envío del formulario
+        const email = document.getElementById("email-address").value;
+        localStorage.setItem("email", email); // Almacena el correo en el almacenamiento local
+        window.location.href = "descuentos.html"; // Redirecciona a la página "descuentos.html"
+    });
+</script>
 
 </body>
 
